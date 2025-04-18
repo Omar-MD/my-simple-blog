@@ -1,4 +1,5 @@
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy"
+import {EleventyI18nPlugin} from '@11ty/eleventy';
 
 /** @param {import("@11ty/eleventy").UserConfig} cfg */
 export default async function(cfg) {
@@ -13,8 +14,14 @@ export default async function(cfg) {
     cfg.addPassthroughCopy("content/img")
     cfg.addPassthroughCopy("content/css")
     cfg.addPlugin(EleventyHtmlBasePlugin) // Transform any absolute URLs in HTML to include this folder name
+    cfg.addPlugin(EleventyI18nPlugin, {
+        defaultLanguage: 'en', // Required
+        errorMode: 'allow-fallback' // Opting out of "strict"
+      });
 };
 
 export const config = {
 	pathPrefix: "/my-simple-blog/",
+    markdownTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk'
 }
