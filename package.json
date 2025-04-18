@@ -1,0 +1,11 @@
+{
+  "name": "my-simple-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Omar-MD/my-simple-blog.git",
+  "author": "Omar Duadu <omar.duadu@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
