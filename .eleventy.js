@@ -8,8 +8,10 @@ export default async function(cfg) {
     cfg.setDataDirectory("_data")         // Global Data template files that apply to all templates
     cfg.setOutputDirectory("build")       // Finished compiled templates dir
     cfg.setTemplateFormats("html, njk")   // Template formats
+    
     cfg.setQuietMode(false)               // Quiet console output
-
+    cfg.addPassthroughCopy("content/img")
+    cfg.addPassthroughCopy("content/css")
     cfg.addPlugin(EleventyHtmlBasePlugin) // Transform any absolute URLs in HTML to include this folder name
 };
 

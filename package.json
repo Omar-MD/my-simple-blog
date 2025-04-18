@@ -11,7 +11,8 @@
   },
   "scripts": {
     "build": "eleventy",
-    "start": "eleventy --serve"
+    "start": "eleventy --serve",
+    "debug": "cross-env DEBUG=Eleventy* eleventy --dryrun"
   },
   "devDependencies": {
     "cross-env": "^7.0.3"
